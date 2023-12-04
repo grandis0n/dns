@@ -1,0 +1,2712 @@
+{
+    "type": "database",
+    "name": "identifier (1)",
+    "objects": [
+        {
+            "type": "table",
+            "database": null,
+            "name": "Availability",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Availability\r\n(\r\n    ProductID INTEGER,\r\n    Quantity  INTEGER DEFAULT (0),\r\n    StoreID   INTEGER,\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID),\r\n    FOREIGN KEY (StoreID) REFERENCES Stores (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "Quantity",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT (0)"
+                        }
+                    ]
+                },
+                {
+                    "name": "StoreID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StoreID) REFERENCES Stores (ID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    6,
+                    1
+                ],
+                [
+                    1,
+                    9,
+                    2
+                ],
+                [
+                    1,
+                    7,
+                    3
+                ],
+                [
+                    1,
+                    7,
+                    4
+                ],
+                [
+                    1,
+                    0,
+                    5
+                ],
+                [
+                    1,
+                    5,
+                    6
+                ],
+                [
+                    1,
+                    3,
+                    7
+                ],
+                [
+                    1,
+                    2,
+                    8
+                ],
+                [
+                    1,
+                    0,
+                    9
+                ],
+                [
+                    2,
+                    5,
+                    1
+                ],
+                [
+                    2,
+                    7,
+                    2
+                ],
+                [
+                    2,
+                    3,
+                    3
+                ],
+                [
+                    2,
+                    7,
+                    4
+                ],
+                [
+                    2,
+                    12,
+                    5
+                ],
+                [
+                    2,
+                    12,
+                    6
+                ],
+                [
+                    2,
+                    9,
+                    7
+                ],
+                [
+                    2,
+                    9,
+                    8
+                ],
+                [
+                    2,
+                    9,
+                    9
+                ],
+                [
+                    5,
+                    11,
+                    1
+                ],
+                [
+                    5,
+                    3,
+                    2
+                ],
+                [
+                    5,
+                    9,
+                    3
+                ],
+                [
+                    5,
+                    3,
+                    4
+                ],
+                [
+                    5,
+                    9,
+                    5
+                ],
+                [
+                    5,
+                    11,
+                    6
+                ],
+                [
+                    5,
+                    6,
+                    7
+                ],
+                [
+                    5,
+                    3,
+                    8
+                ],
+                [
+                    5,
+                    9,
+                    9
+                ],
+                [
+                    3,
+                    6,
+                    1
+                ],
+                [
+                    3,
+                    7,
+                    2
+                ],
+                [
+                    3,
+                    0,
+                    3
+                ],
+                [
+                    3,
+                    9,
+                    4
+                ],
+                [
+                    3,
+                    5,
+                    5
+                ],
+                [
+                    3,
+                    3,
+                    6
+                ],
+                [
+                    3,
+                    7,
+                    7
+                ],
+                [
+                    3,
+                    8,
+                    8
+                ],
+                [
+                    3,
+                    4,
+                    9
+                ],
+                [
+                    4,
+                    2,
+                    1
+                ],
+                [
+                    4,
+                    2,
+                    2
+                ],
+                [
+                    4,
+                    6,
+                    3
+                ],
+                [
+                    4,
+                    9,
+                    4
+                ],
+                [
+                    4,
+                    0,
+                    5
+                ],
+                [
+                    4,
+                    1,
+                    6
+                ],
+                [
+                    4,
+                    4,
+                    7
+                ],
+                [
+                    4,
+                    7,
+                    8
+                ],
+                [
+                    4,
+                    2,
+                    9
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Brands",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Brands\r\n(\r\n    ID      INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    Name    TEXT NOT NULL,\r\n    Country TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Name",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Country",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "AMD",
+                    "США"
+                ],
+                [
+                    2,
+                    "Apple",
+                    "США"
+                ],
+                [
+                    3,
+                    "Asus",
+                    "Тайвань"
+                ],
+                [
+                    4,
+                    "Bosch",
+                    "Германия"
+                ],
+                [
+                    5,
+                    "Dexp",
+                    "Россия"
+                ],
+                [
+                    6,
+                    "Intel",
+                    "США"
+                ],
+                [
+                    7,
+                    "Haier",
+                    "Китай"
+                ],
+                [
+                    8,
+                    "Hansa",
+                    "Германия"
+                ],
+                [
+                    9,
+                    "Honor",
+                    "Китай"
+                ],
+                [
+                    10,
+                    "Hotpoint-ariston",
+                    "Италия"
+                ],
+                [
+                    11,
+                    "Lenovo",
+                    "Китай"
+                ],
+                [
+                    12,
+                    "Lg",
+                    "Южная Корея"
+                ],
+                [
+                    13,
+                    "Msi",
+                    "Тайвань"
+                ],
+                [
+                    14,
+                    "Nokia",
+                    "Финляндия"
+                ],
+                [
+                    15,
+                    "Oppo",
+                    "Китай"
+                ],
+                [
+                    16,
+                    "Poco",
+                    "Китай"
+                ],
+                [
+                    17,
+                    "Samsung",
+                    "Южная Корея"
+                ],
+                [
+                    18,
+                    "Sony",
+                    "Япония"
+                ],
+                [
+                    19,
+                    "Xiaomi",
+                    "Китай"
+                ],
+                [
+                    20,
+                    "Zte",
+                    "Китай"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Cart",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Cart\r\n(\r\n    ID         INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    UserID     INTEGER NOT NULL,\r\n    ProductID  INTEGER NOT NULL,\r\n    Price      REAL    NOT NULL,\r\n    Quantity   INTEGER NOT NULL,\r\n    TotalPrice REAL    NOT NULL,\r\n    FOREIGN KEY (UserID) REFERENCES \"old_Customers\" (ID),\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "UserID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Price",
+                    "type": "REAL",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quantity",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "TotalPrice",
+                    "type": "REAL",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (UserID) REFERENCES \"old_Customers\" (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Categories",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Categories\r\n(\r\n    ID   INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    Name TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Name",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Варочные панели"
+                ],
+                [
+                    2,
+                    "Ноутбуки"
+                ],
+                [
+                    3,
+                    "Процессоры"
+                ],
+                [
+                    4,
+                    "Смартфоны"
+                ],
+                [
+                    5,
+                    "Стиральные машины"
+                ],
+                [
+                    6,
+                    "Холодильное оборудование"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "CategoryCharacteristics",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE CategoryCharacteristics\r\n(\r\n    CategoryID       INTEGER,\r\n    CharacteristicID INTEGER,\r\n    FOREIGN KEY (CategoryID) REFERENCES Categories (ID),\r\n    FOREIGN KEY (CharacteristicID) REFERENCES Characteristics (ID),\r\n    PRIMARY KEY (CategoryID, CharacteristicID)\r\n)",
+            "columns": [
+                {
+                    "name": "CategoryID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "CharacteristicID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (CategoryID) REFERENCES Categories (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (CharacteristicID) REFERENCES Characteristics (ID)"
+                },
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (CategoryID, CharacteristicID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    4,
+                    1
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    4,
+                    3
+                ],
+                [
+                    4,
+                    4
+                ],
+                [
+                    4,
+                    5
+                ],
+                [
+                    4,
+                    6
+                ],
+                [
+                    4,
+                    7
+                ],
+                [
+                    1,
+                    2
+                ],
+                [
+                    1,
+                    8
+                ],
+                [
+                    1,
+                    9
+                ],
+                [
+                    1,
+                    10
+                ],
+                [
+                    1,
+                    11
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    1,
+                    13
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Characteristics",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Characteristics\r\n(\r\n    ID          INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    Name        TEXT NOT NULL,\r\n    Description TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Name",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Description",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Год релиза",
+                    "Год выпуска смартфона"
+                ],
+                [
+                    2,
+                    "Цвет",
+                    "Цвет"
+                ],
+                [
+                    3,
+                    "Количество SIM",
+                    "Количество SIM-карт"
+                ],
+                [
+                    4,
+                    "Диагональ экрана",
+                    "Размер диагонали экрана (дюйм)"
+                ],
+                [
+                    5,
+                    "Версия OC",
+                    "Операционная система"
+                ],
+                [
+                    6,
+                    "Объем оперативной памяти",
+                    "Объем оперативной памяти (GB)"
+                ],
+                [
+                    7,
+                    "Объем памяти",
+                    "Объем встроенной памяти (GB)"
+                ],
+                [
+                    8,
+                    "Тип варочной поверхности",
+                    "Тип варочной поверхности"
+                ],
+                [
+                    9,
+                    "Материал",
+                    "Материал"
+                ],
+                [
+                    10,
+                    "Количество комфорок",
+                    "Количество комфорок (шт)"
+                ],
+                [
+                    11,
+                    "Вид управления",
+                    "Вид управления"
+                ],
+                [
+                    12,
+                    "Мощность подключения",
+                    "Мощность подключения (кВт)"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Customers",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Customers\r\n(\r\n    ID          INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    Name        TEXT        NOT NULL,\r\n    Email       VARCHAR(319),\r\n    PhoneNumber VARCHAR(12) NOT NULL UNIQUE CHECK (LENGTH(PhoneNumber) = 12 AND SUBSTR(PhoneNumber, 1, 2) = '+7'),\r\n    Address     TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Name",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Email",
+                    "type": "VARCHAR"
+                },
+                {
+                    "name": "PhoneNumber",
+                    "type": "VARCHAR",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL "
+                        },
+                        {
+                            "type": "UNIQUE",
+                            "definition": "UNIQUE "
+                        },
+                        {
+                            "type": "CHECK",
+                            "definition": "CHECK (LENGTH(PhoneNumber) = 12 AND SUBSTR(PhoneNumber, 1, 2) = '+7')"
+                        }
+                    ]
+                },
+                {
+                    "name": "Address",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "John Doe",
+                    "john.doe@example.com",
+                    "+79143975194",
+                    "123 Main St"
+                ],
+                [
+                    2,
+                    "Jane Smith",
+                    "jane.smith@example.com",
+                    "+79143875194",
+                    "456 Elm St"
+                ],
+                [
+                    3,
+                    "Bob Johnson",
+                    "bob.johnson@example.com",
+                    "+79523875194",
+                    "789 Oak St"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "DeliveryMethod",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE DeliveryMethod\r\n(\r\n    DeliveryID   INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    DeliveryType TEXT    NOT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "DeliveryID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "DeliveryType",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Самовывоз"
+                ],
+                [
+                    2,
+                    "Доставка"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Departments",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Departments\r\n(\r\n    DepartmentID   INTEGER PRIMARY KEY,\r\n    DepartmentName TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "DepartmentID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "DepartmentName",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "EmployeePermissions",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE EmployeePermissions\r\n(\r\n    EmployeePermissionID INTEGER PRIMARY KEY,\r\n    EmployeeID           INTEGER,\r\n    PermissionID         INTEGER,\r\n    FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID),\r\n    FOREIGN KEY (PermissionID) REFERENCES Permissions (PermissionID)\r\n)",
+            "columns": [
+                {
+                    "name": "EmployeePermissionID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "PermissionID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PermissionID) REFERENCES Permissions (PermissionID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "EmployeePositions",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE EmployeePositions\r\n(\r\n    EmployeePositionID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    EmployeeID         INTEGER,\r\n    PositionID         INTEGER,\r\n    Status             TEXT,\r\n    DateAssigned       DATE,\r\n    DateRemoved        DATE,\r\n    Salary             INTEGER,\r\n    Rate               REAL,\r\n    FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID),\r\n    FOREIGN KEY (PositionID) REFERENCES Positions (PositionID)\r\n)",
+            "columns": [
+                {
+                    "name": "EmployeePositionID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "PositionID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "Status",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "DateAssigned",
+                    "type": "DATE"
+                },
+                {
+                    "name": "DateRemoved",
+                    "type": "DATE"
+                },
+                {
+                    "name": "Salary",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "Rate",
+                    "type": "REAL"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PositionID) REFERENCES Positions (PositionID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    3,
+                    3,
+                    "Повышен",
+                    "2023-12-04",
+                    "2023-12-04",
+                    25000,
+                    1
+                ],
+                [
+                    2,
+                    3,
+                    2,
+                    "Активен",
+                    "2023-12-04",
+                    null,
+                    25000,
+                    2
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Employees",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Employees\r\n(\r\n    EmployeeID    INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    FirstName     TEXT        NOT NULL,\r\n    LastName      TEXT        NOT NULL,\r\n    Email         VARCHAR(319),\r\n    PhoneNumber   VARCHAR(12) NOT NULL CHECK (LENGTH(PhoneNumber) = 12 AND SUBSTR(PhoneNumber, 1, 2) = '+7'),\r\n    HireDate      DATE,\r\n    Salary        REAL,\r\n    Status        TEXT DEFAULT 'Активен' CHECK (Status IN ('Активен', 'Уволен')),\r\n    DismissalDate DATE DEFAULT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "FirstName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "LastName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Email",
+                    "type": "VARCHAR"
+                },
+                {
+                    "name": "PhoneNumber",
+                    "type": "VARCHAR",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL "
+                        },
+                        {
+                            "type": "CHECK",
+                            "definition": "CHECK (LENGTH(PhoneNumber) = 12 AND SUBSTR(PhoneNumber, 1, 2) = '+7')"
+                        }
+                    ]
+                },
+                {
+                    "name": "HireDate",
+                    "type": "DATE"
+                },
+                {
+                    "name": "Salary",
+                    "type": "REAL"
+                },
+                {
+                    "name": "Status",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT 'Активен' "
+                        },
+                        {
+                            "type": "CHECK",
+                            "definition": "CHECK (Status IN ('Активен', 'Уволен'))"
+                        }
+                    ]
+                },
+                {
+                    "name": "DismissalDate",
+                    "type": "DATE",
+                    "constraints": [
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Кирилл",
+                    "Абобов",
+                    "fghjk@mail.ru",
+                    "+79835719457",
+                    "2023-12-04",
+                    null,
+                    "Активен",
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "EmployeesDepartments",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE EmployeesDepartments\r\n(\r\n    EmployeeID   INTEGER,\r\n    DepartmentID INTEGER,\r\n    PRIMARY KEY (EmployeeID, DepartmentID),\r\n    FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID),\r\n    FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID)\r\n)",
+            "columns": [
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DepartmentID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (EmployeeID, DepartmentID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "FavouriteProducts",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE \"FavouriteProducts\"\r\n(\r\n    UserID    INTEGER,\r\n    ProductID INTEGER,\r\n    PRIMARY KEY (UserID, ProductID),\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID),\r\n    FOREIGN KEY (UserID) REFERENCES Customers (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "UserID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (UserID, ProductID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (UserID) REFERENCES Customers (ID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Invoices",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Invoices\r\n(\r\n    InvoiceID       INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    OrderID         INTEGER UNIQUE NOT NULL,\r\n    Amount          INTEGER NOT NULL,\r\n    PaymentStatusID INTEGER NOT NULL,\r\n    PaymentTypeID   INTEGER NOT NULL,\r\n    PaymentMethodID INTEGER NOT NULL,\r\n    FOREIGN KEY (OrderID) REFERENCES \"Orders\" (OrderID),\r\n    FOREIGN KEY (PaymentStatusID) REFERENCES PaymentStatus (PaymentStatusID),\r\n    FOREIGN KEY (PaymentTypeID) REFERENCES PaymentType (PaymentTypeID),\r\n    FOREIGN KEY (PaymentMethodID) REFERENCES PaymentMethod (PaymentMethodID)\r\n)",
+            "columns": [
+                {
+                    "name": "InvoiceID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "UNIQUE",
+                            "definition": "UNIQUE "
+                        },
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Amount",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "PaymentStatusID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "PaymentTypeID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "PaymentMethodID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (OrderID) REFERENCES \"Orders\" (OrderID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PaymentStatusID) REFERENCES PaymentStatus (PaymentStatusID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PaymentTypeID) REFERENCES PaymentType (PaymentTypeID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PaymentMethodID) REFERENCES PaymentMethod (PaymentMethodID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "OrderDetails",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE OrderDetails\r\n(\r\n    OrderDetailID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    OrderID       INTEGER NOT NULL,\r\n    ProductID     INTEGER NOT NULL,\r\n    Quantity      INTEGER NOT NULL,\r\n    Price         REAL    NOT NULL,\r\n    StatusID      INTEGER NOT NULL DEFAULT 1,\r\n    FOREIGN KEY (OrderID) REFERENCES Orders (OrderID),\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID),\r\n    FOREIGN KEY (StatusID) REFERENCES OrderStatus (StatusID)\r\n)",
+            "columns": [
+                {
+                    "name": "OrderDetailID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quantity",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Price",
+                    "type": "REAL",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "StatusID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL "
+                        },
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT 1"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (OrderID) REFERENCES Orders (OrderID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StatusID) REFERENCES OrderStatus (StatusID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Orders",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE \"Orders\"\r\n(\r\n    OrderID    INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    UserID     INTEGER,\r\n    Date       DATE    NOT NULL,\r\n    StatusID   INTEGER NOT NULL DEFAULT 1,\r\n    DeliveryID INTEGER NOT NULL,\r\n    StoreID    INTEGER NOT NULL,\r\n    InvoiceID  INTEGER, EmployeeID INTEGER,\r\n    FOREIGN KEY (UserID) REFERENCES Customers (ID),\r\n    FOREIGN KEY (StatusID) REFERENCES OrderStatus (StatusID),\r\n    FOREIGN KEY (DeliveryID) REFERENCES DeliveryMethod (DeliveryID),\r\n    FOREIGN KEY (StoreID) REFERENCES Stores (ID),\r\n    FOREIGN KEY (InvoiceID) REFERENCES Invoices (InvoiceID)\r\n)",
+            "columns": [
+                {
+                    "name": "OrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "UserID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "Date",
+                    "type": "DATE",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "StatusID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL "
+                        },
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT 1"
+                        }
+                    ]
+                },
+                {
+                    "name": "DeliveryID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "StoreID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "InvoiceID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (UserID) REFERENCES Customers (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StatusID) REFERENCES OrderStatus (StatusID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (DeliveryID) REFERENCES DeliveryMethod (DeliveryID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StoreID) REFERENCES Stores (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (InvoiceID) REFERENCES Invoices (InvoiceID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "OrderStatus",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE OrderStatus\r\n(\r\n    StatusID   INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    StatusName TEXT    NOT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "StatusID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "StatusName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Оформлен"
+                ],
+                [
+                    2,
+                    "Сборка"
+                ],
+                [
+                    3,
+                    "Готов к выдаче"
+                ],
+                [
+                    4,
+                    "Выполнен"
+                ],
+                [
+                    5,
+                    "Отменён"
+                ],
+                [
+                    6,
+                    "Доставляется"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PaymentMethod",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE PaymentMethod\r\n(\r\n    PaymentMethodID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    MethodName      TEXT    NOT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "PaymentMethodID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "MethodName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "При получении"
+                ],
+                [
+                    2,
+                    "При оформлении"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PaymentStatus",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE PaymentStatus\r\n(\r\n    PaymentStatusID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    StatusName      TEXT    NOT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "PaymentStatusID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "StatusName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Оплачено"
+                ],
+                [
+                    2,
+                    "Не оплачено"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PaymentType",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE PaymentType\r\n(\r\n    PaymentTypeID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    TypeName      TEXT    NOT NULL\r\n)",
+            "columns": [
+                {
+                    "name": "PaymentTypeID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "TypeName",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL\r\n"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Наличные"
+                ],
+                [
+                    2,
+                    "Карта"
+                ],
+                [
+                    3,
+                    "Расчетный счет"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Permissions",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Permissions\r\n(\r\n    PermissionID   INTEGER PRIMARY KEY,\r\n    PermissionName TEXT,\r\n    Description    TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "PermissionID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "PermissionName",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Description",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PositionPermissions",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE PositionPermissions (\r\n    PositionPermissionID INTEGER PRIMARY KEY,\r\n    PositionID INTEGER,\r\n    PermissionID INTEGER,\r\n    FOREIGN KEY (PositionID) REFERENCES Positions(PositionID),\r\n    FOREIGN KEY (PermissionID) REFERENCES Permissions(PermissionID)\r\n)",
+            "columns": [
+                {
+                    "name": "PositionPermissionID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "PositionID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "PermissionID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PositionID) REFERENCES Positions(PositionID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (PermissionID) REFERENCES Permissions(PermissionID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Positions",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Positions\r\n(\r\n    PositionID   INTEGER PRIMARY KEY,\r\n    PositionName TEXT,\r\n    Description  TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "PositionID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "PositionName",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Description",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "ProductCharacteristics",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE ProductCharacteristics\r\n(\r\n    ProductID        INTEGER,\r\n    CharacteristicID INTEGER,\r\n    Value            TEXT, -- Значение характеристики для конкретного продукта\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID),\r\n    FOREIGN KEY (CharacteristicID) REFERENCES Characteristics (ID),\r\n    PRIMARY KEY (ProductID, CharacteristicID)\r\n)",
+            "columns": [
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "CharacteristicID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "Value",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (CharacteristicID) REFERENCES Characteristics (ID)"
+                },
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ProductID, CharacteristicID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    1,
+                    "2021"
+                ],
+                [
+                    1,
+                    2,
+                    "Зеленый"
+                ],
+                [
+                    1,
+                    3,
+                    "1"
+                ],
+                [
+                    1,
+                    4,
+                    "6.7"
+                ],
+                [
+                    1,
+                    5,
+                    "IOS 15"
+                ],
+                [
+                    1,
+                    6,
+                    "6"
+                ],
+                [
+                    1,
+                    7,
+                    "512"
+                ],
+                [
+                    2,
+                    1,
+                    "2021"
+                ],
+                [
+                    2,
+                    2,
+                    "Синий"
+                ],
+                [
+                    2,
+                    3,
+                    "1"
+                ],
+                [
+                    2,
+                    4,
+                    "6.7"
+                ],
+                [
+                    2,
+                    5,
+                    "IOS 15"
+                ],
+                [
+                    2,
+                    6,
+                    "6"
+                ],
+                [
+                    2,
+                    7,
+                    "512"
+                ],
+                [
+                    3,
+                    1,
+                    "2023"
+                ],
+                [
+                    3,
+                    2,
+                    "Белый"
+                ],
+                [
+                    3,
+                    3,
+                    "1"
+                ],
+                [
+                    3,
+                    4,
+                    "7.6"
+                ],
+                [
+                    3,
+                    5,
+                    "Android 13"
+                ],
+                [
+                    3,
+                    6,
+                    "12"
+                ],
+                [
+                    3,
+                    7,
+                    "1024"
+                ],
+                [
+                    4,
+                    1,
+                    "2023"
+                ],
+                [
+                    4,
+                    2,
+                    "Зеленый"
+                ],
+                [
+                    4,
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    4,
+                    "6.5"
+                ],
+                [
+                    4,
+                    5,
+                    "Android"
+                ],
+                [
+                    4,
+                    6,
+                    "4"
+                ],
+                [
+                    4,
+                    7,
+                    "128"
+                ],
+                [
+                    5,
+                    1,
+                    "2023"
+                ],
+                [
+                    5,
+                    2,
+                    "Голубой"
+                ],
+                [
+                    5,
+                    3,
+                    "2"
+                ],
+                [
+                    5,
+                    4,
+                    "6.67"
+                ],
+                [
+                    5,
+                    5,
+                    "Android 12"
+                ],
+                [
+                    5,
+                    6,
+                    "8"
+                ],
+                [
+                    5,
+                    7,
+                    "256"
+                ],
+                [
+                    6,
+                    2,
+                    "Черный"
+                ],
+                [
+                    6,
+                    9,
+                    "Электрическая"
+                ],
+                [
+                    6,
+                    10,
+                    "Стеклокерамика"
+                ],
+                [
+                    6,
+                    11,
+                    "2"
+                ],
+                [
+                    6,
+                    12,
+                    "Сенсорное"
+                ],
+                [
+                    6,
+                    8,
+                    "12"
+                ],
+                [
+                    6,
+                    13,
+                    "3,2"
+                ],
+                [
+                    7,
+                    2,
+                    "Черный"
+                ],
+                [
+                    7,
+                    9,
+                    "Индукционная"
+                ],
+                [
+                    7,
+                    10,
+                    "Стеклокерамика"
+                ],
+                [
+                    7,
+                    11,
+                    "4"
+                ],
+                [
+                    7,
+                    12,
+                    "Сенсорное"
+                ],
+                [
+                    7,
+                    8,
+                    "12"
+                ],
+                [
+                    7,
+                    13,
+                    "7"
+                ],
+                [
+                    8,
+                    2,
+                    "Черный"
+                ],
+                [
+                    8,
+                    9,
+                    "Электрическая"
+                ],
+                [
+                    8,
+                    10,
+                    "Стеклокерамика"
+                ],
+                [
+                    8,
+                    11,
+                    "4"
+                ],
+                [
+                    8,
+                    12,
+                    "Сенсорное"
+                ],
+                [
+                    8,
+                    8,
+                    "12"
+                ],
+                [
+                    8,
+                    13,
+                    "7"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "ProductCharacteristicsNew",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE ProductCharacteristicsNew\r\n(\r\n    ProductCharacteristicID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    ProductID               INTEGER NOT NULL,\r\n    Characteristics         TEXT, -- JSON\r\n\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "ProductCharacteristicID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Characteristics",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    1,
+                    "{\"Год релиза\": 2021, \"Цвет\": \"Зеленый\", \"Количество SIM\": 1, \"Диагональ экрана\": \"6.7\", \"Версия OC\": \"IOS 15\", \"Объем оперативной памяти\": 6, \"Объем памяти\": 512, \"Гарантия производителя\": 12}"
+                ],
+                [
+                    2,
+                    2,
+                    "{\"Год релиза\": 2021, \"Цвет\": \"Синий\", \"Количество SIM\": 1, \"Диагональ экрана\": \"6.7\", \"Версия OC\": \"IOS 15\", \"Объем оперативной памяти\": 6, \"Объем памяти\": 512, \"Гарантия производителя\": 12}"
+                ],
+                [
+                    3,
+                    3,
+                    "{\"Год релиза\": 2023, \"Цвет\": \"Белый\", \"Количество SIM\": 1, \"Диагональ экрана\": \"7.6\", \"Версия OC\": \"Android 13\", \"Объем оперативной памяти\": 12, \"Объем памяти\": 1024, \"Гарантия производителя\": 12}"
+                ],
+                [
+                    4,
+                    4,
+                    "{\"Год релиза\": 2023, \"Цвет\": \"Зеленый\", \"Количество SIM\": 2, \"Диагональ экрана\": \"6.5\", \"Версия OC\": \"Android\", \"Объем оперативной памяти\": 4, \"Объем памяти\": 128, \"Гарантия производителя\": 12}"
+                ],
+                [
+                    5,
+                    5,
+                    "{\"Год релиза\": 2023, \"Цвет\": \"Голубой\", \"Количество SIM\": 2, \"Диагональ экрана\": \"6.67\", \"Версия OC\": \"Android 12\", \"Объем оперативной памяти\": 8, \"Объем памяти\": 256, \"Гарантия производителя\": 12}"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Products",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Products\r\n(\r\n    ID          INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    SKU         TEXT NOT NULL UNIQUE,\r\n    Name        TEXT NOT NULL,\r\n    Description TEXT,\r\n    Price       REAL,\r\n    BrandID     INTEGER,\r\n    CategoryID  INTEGER,\r\n    FOREIGN KEY (BrandID) REFERENCES Brands (ID),\r\n    FOREIGN KEY (CategoryID) REFERENCES Categories (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "SKU",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL "
+                        },
+                        {
+                            "type": "UNIQUE",
+                            "definition": "UNIQUE"
+                        }
+                    ]
+                },
+                {
+                    "name": "Name",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Description",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Price",
+                    "type": "REAL"
+                },
+                {
+                    "name": "BrandID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "CategoryID",
+                    "type": "INTEGER"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (BrandID) REFERENCES Brands (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (CategoryID) REFERENCES Categories (ID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "5041585",
+                    "iPhone 13 Pro Max 512 ГБ",
+                    "Смартфон Apple iPhone 13 Pro Max – стильная и технологичная модель в линейке производителя, одной из примечательных особенностей которой является безрамочный дисплей OLED 6.7 дюйма. Благодаря разрешению 2778x1284 пикселей он способен впечатлять реалистичным изображением с точностью передачи деталей. Корпус мобильного устройства надежно защищен от воздействия влаги и пыли по стандарту IP68, а на передней стороне дополнительно используется покрытие Ceramic Shield для повышения устойчивости к ударам и появлению царапин.\r\nПроцессор Apple A15 Bionic с 6-ядрами обеспечивает высокую производительность системы. Основная тройная камера 12+12+12 Мп в дополнении вспышки True Tone, ряда режимов и функций позволяет создавать реалистичные снимки даже в ночное время. На передней стороне предусмотрена камера с датчиком 12 Мп для селфи и видеозвонков. К перечню преимуществ Apple iPhone 13 Pro Max относятся стереодинамики, беспроводные интерфейсы, голосовой помощник Siri, длительное время автономности и поддержка беспроводной зарядки.",
+                    145199,
+                    2,
+                    4
+                ],
+                [
+                    2,
+                    "5074142",
+                    "iPhone 13 Pro Max 512 ГБ",
+                    "Смартфон Apple iPhone 13 Pro Max – стильная и технологичная модель в линейке производителя, одной из примечательных особенностей которой является безрамочный дисплей OLED 6.7 дюйма. Благодаря разрешению 2778x1284 пикселей он способен впечатлять реалистичным изображением с точностью передачи деталей. Корпус мобильного устройства надежно защищен от воздействия влаги и пыли по стандарту IP68, а на передней стороне дополнительно используется покрытие Ceramic Shield для повышения устойчивости к ударам и появлению царапин.\r\nПроцессор Apple A15 Bionic с 6-ядрами обеспечивает высокую производительность системы. Основная тройная камера 12+12+12 Мп в дополнении вспышки True Tone, ряда режимов и функций позволяет создавать реалистичные снимки даже в ночное время. На передней стороне предусмотрена камера с датчиком 12 Мп для селфи и видеозвонков. К перечню преимуществ Apple iPhone 13 Pro Max относятся стереодинамики, беспроводные интерфейсы, голосовой помощник Siri, длительное время автономности и поддержка беспроводной зарядки.",
+                    145199,
+                    2,
+                    4
+                ],
+                [
+                    3,
+                    "5425264",
+                    "Galaxy Z Fold5 1024 ГБ",
+                    "Смартфон Samsung Galaxy Z Fold5 1024 ГБ отличается складной конструкцией и двумя экранами. Шарнирный износостойкий механизм Flex Hinge позволяет открывать, складывать и фиксировать устройство в заданном положении. Металлический корпус с классом защиты IPX8 гарантирует стойкость к попаданию воды и пыли. Основной экран диагональю 7.6 дюйма Dynamic AMOLED 2X передает четкую и красочную картинку. Для удобного просмотра контента и управления устройством в сложенном виде предусмотрен дополнительный экран. Электронное перо S Pen обеспечивает широкие возможности для рисования и создания заметок.",
+                    219999,
+                    17,
+                    4
+                ],
+                [
+                    4,
+                    "9985442",
+                    "Samsung Galaxy A24 128 ГБ",
+                    "Смартфон Samsung Galaxy A24 128 ГБ выполнен в корпусе светло-зеленого цвета и отличается изящностью благодаря компактным размерам. В устройстве установлен экран 6.5 дюйма по технологии Super AMOLED, что позволяет оценить реалистичное изображение с глубокими и натуральными оттенками. Аппаратная платформа с процессором MediaTek Helio G99 и 4 ГБ оперативной памяти гарантирует быстродействие системы при работе с приложениями, запуске игр, просмотре мультимедиа.",
+                    22999,
+                    17,
+                    4
+                ],
+                [
+                    5,
+                    "5091090",
+                    "POCO X5 Pro 5G 256",
+                    "Смартфон POCO X5 Pro голубого цвета характеризуется высокой производительностью и скоростью работы. Модель поддерживает связь в сети 5G, а 8-ядерный процессор обеспечивает бесперебойную и быструю работу. Устройство имеет память на 256 ГБ, чего достаточно для хранения большого количества данных в высоком разрешении. Корпус устойчив к воздействию пыли, влаги и механическим повреждениям. Дисплей AMOLED диагональю 6.67 дюймов демонстрирует высокую яркость и детализацию.",
+                    34499,
+                    16,
+                    4
+                ],
+                [
+                    6,
+                    "1292955",
+                    "DEXP 4M2CTYL\/B",
+                    "Электрическая варочная поверхность DEXP 4M2CTYL\/B отличается от прочих подобных устройств компактными размерами и наличием 2 конфорок для приготовления пищи. Это позволяет разместить ее даже на самой маленькой кухне. Устройство устанавливается автономно от духового шкафа. Оно состоит из стеклокерамической поверхности. Каждая конфорка оснащена индикатором остаточного тепла: это позволяет доводить блюдо до необходимой консистенции на выключенной плите. Регулировать мощность можно в пределах 9 уровней.",
+                    6899,
+                    5,
+                    1
+                ],
+                [
+                    7,
+                    "8153302",
+                    "LG HU641PH",
+                    "Индукционная варочная поверхность LG HU641PH характеризуется простой системой управления, легкой очисткой и минималистским дизайнерским оформлением. Данная модель оснащена 4 зонами нагрева – 2 мощностью 1200 Вт и 2 мощностью 2300 Вт. Таймер позволяет выбрать время приготовления от 1 до 99 минут. Функция Power Boost быстрее нагревает пищу и позволяет ускорить процесс приготовления. Также имеются индикатор остаточного тепла и функция блокировки от детей.",
+                    25599,
+                    12,
+                    1
+                ],
+                [
+                    8,
+                    "4885434",
+                    "Samsung NZ64T3516BK\/WT",
+                    "Электрическая варочная поверхность Samsung NZ64T3516BK\/WT – устройство, при непосредственном участии которого вам под силу реализация даже самой смелой кулинарной задумки. Намереваетесь преподнести к столу сытный плов или овощное рагу? Специально для вок-посуды предусмотрена двухконтурная зона нагрева. Благодаря скошенным углам у хозяек не возникнет трудностей во время плановой очистки домашней ассистентки.",
+                    26999,
+                    17,
+                    1
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Reviews",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Reviews\r\n(\r\n    ID         INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    ProductID  INTEGER NOT NULL,\r\n    OrderID    INTEGER DEFAULT NULL,\r\n    ReviewDate DATE,\r\n    ReviewText TEXT    DEFAULT NULL,\r\n    Rating     INTEGER CHECK (Rating BETWEEN 1 AND 5),\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID),\r\n    FOREIGN KEY (OrderID) REFERENCES Orders (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "ReviewDate",
+                    "type": "DATE"
+                },
+                {
+                    "name": "ReviewText",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "DEFAULT",
+                            "definition": "DEFAULT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Rating",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "CHECK",
+                            "definition": "CHECK (Rating BETWEEN 1 AND 5)"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (OrderID) REFERENCES Orders (ID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    1,
+                    null,
+                    "2023-11-06",
+                    "Great product!",
+                    5
+                ],
+                [
+                    2,
+                    1,
+                    null,
+                    "2023-11-06",
+                    "Love it!",
+                    4
+                ],
+                [
+                    3,
+                    1,
+                    null,
+                    "2023-11-06",
+                    "Good",
+                    4
+                ],
+                [
+                    4,
+                    2,
+                    null,
+                    "2023-11-06",
+                    "Nice",
+                    3
+                ],
+                [
+                    5,
+                    2,
+                    null,
+                    "2023-11-06",
+                    "Great",
+                    3
+                ],
+                [
+                    6,
+                    3,
+                    null,
+                    "2023-11-06",
+                    "Nice",
+                    4
+                ],
+                [
+                    7,
+                    3,
+                    null,
+                    "2023-11-06",
+                    "Nice",
+                    4
+                ],
+                [
+                    8,
+                    3,
+                    null,
+                    "2023-11-06",
+                    "Nice",
+                    5
+                ],
+                [
+                    9,
+                    2,
+                    null,
+                    "2023-11-06",
+                    "Nice",
+                    3
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "StoreInvoices",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE StoreInvoices\r\n(\r\n    InvoiceID       INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    StoreOrderID    INTEGER UNIQUE NOT NULL,\r\n    Sum          INTEGER NOT NULL,\r\n    InvoiceDate     DATE NOT NULL,\r\n    FOREIGN KEY (StoreOrderID) REFERENCES StoreOrders (StoreOrderID)\r\n)",
+            "columns": [
+                {
+                    "name": "InvoiceID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "StoreOrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "UNIQUE",
+                            "definition": "UNIQUE "
+                        },
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sum",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "InvoiceDate",
+                    "type": "DATE",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StoreOrderID) REFERENCES StoreOrders (StoreOrderID)\r\n"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "StoreOrderDetails",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE StoreOrderDetails\r\n(\r\n    StoreOrderDetailID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    StoreOrderID INTEGER NOT NULL,\r\n    ProductID INTEGER NOT NULL,\r\n    Quantity INTEGER NOT NULL,\r\n    FOREIGN KEY (StoreOrderID) REFERENCES StoreOrders (StoreOrderID),\r\n    FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n)",
+            "columns": [
+                {
+                    "name": "StoreOrderDetailID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "StoreOrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quantity",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StoreOrderID) REFERENCES StoreOrders (StoreOrderID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ProductID) REFERENCES Products (ID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    1,
+                    1,
+                    20
+                ],
+                [
+                    2,
+                    1,
+                    2,
+                    10
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "StoreOrders",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE StoreOrders\r\n(\r\n    StoreOrderID INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    EmployeeID INTEGER,\r\n    StoreID INTEGER NOT NULL,\r\n    OrderDate DATE NOT NULL,\r\n    Status TEXT NOT NULL,\r\n    FOREIGN KEY (StoreID) REFERENCES Stores (ID),\r\n    FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID)\r\n)",
+            "columns": [
+                {
+                    "name": "StoreOrderID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "EmployeeID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "StoreID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderDate",
+                    "type": "DATE",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                },
+                {
+                    "name": "Status",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "NOT NULL",
+                            "definition": "NOT NULL"
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (StoreID) REFERENCES Stores (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID)\r\n"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    1,
+                    4,
+                    "2023-12-04",
+                    "Оформлен"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "Stores",
+            "withoutRowId": false,
+            "strict": false,
+            "ddl": "CREATE TABLE Stores\r\n(\r\n    ID       INTEGER PRIMARY KEY AUTOINCREMENT,\r\n    City     TEXT,\r\n    Street   TEXT,\r\n    Building TEXT,\r\n    Area     TEXT\r\n)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "City",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Street",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Building",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "Area",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "Владивосток",
+                    "Проспект Красного Знамени",
+                    "59",
+                    "Ленинский"
+                ],
+                [
+                    2,
+                    "Владивосток",
+                    "Семеновская",
+                    "23",
+                    "Ленинский"
+                ],
+                [
+                    3,
+                    "Владивосток",
+                    "Русская",
+                    "46 ст3",
+                    "Первореченский"
+                ],
+                [
+                    4,
+                    "Владивосток",
+                    "Баляева",
+                    "35",
+                    "Ленинский"
+                ],
+                [
+                    5,
+                    "Владивосток",
+                    "Фадеева",
+                    "1а",
+                    "Первомайский"
+                ],
+                [
+                    6,
+                    "Владивосток",
+                    "Крыгина",
+                    "15а",
+                    "Фрунзенский"
+                ],
+                [
+                    7,
+                    "Владивосток",
+                    "Калинина",
+                    "275а",
+                    "Первомайский"
+                ],
+                [
+                    8,
+                    "Владивосток",
+                    "Калинина",
+                    "8",
+                    "Первомайский"
+                ],
+                [
+                    9,
+                    "Владивосток",
+                    "Проспект 100-летия Владивостока",
+                    "66",
+                    "Первореченский"
+                ]
+            ]
+        }
+    ]
+}
